@@ -37,16 +37,53 @@ body {
   color: var(--main-fonts);
 }
 
+#legend {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 300px;
+  padding: 5px;
+  gap: 5px;
+  margin-left: 600px;  
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-item span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#doping-positive, #doping-negative {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  text-align: left;
+}
+
+#doping-negative {
+  background-color: red;
+}
+
+#doping-positive {
+  background-color: green;
+}
+
 #tooltip {
   position: absolute; 
-  text-align: center;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.7); 
-  color: #fff; 
+  text-align: left;
+  padding: 5px;
+  background: rgba(140, 166, 253, 0.7); 
+  color: #000000; 
   border-radius: 4px; 
   pointer-events: none; 
-  font-size: 0.9em;
+  font-size: 0.8em;
   min-width: 120px; 
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 5px rgba(155, 232, 248, 0.3);
   z-index: 1000; /* Garante que fique acima de outros elementos */
 }

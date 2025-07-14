@@ -38,6 +38,19 @@ function App() {
     fetchData();
   }, []);
 
+  if (loading) {
+    return <div id='main'><h2>Carregando dados do gráfico...</h2></div>;
+  }
+
+  if (error) {
+    return <div id='main'><h2>Erro: {error}</h2></div>;
+  }
+
+  if (chartData.length === 0) {
+    return <div id='main'><h2>Nenhum dado disponível para o gráfico</h2></div>;
+  }
+
+
   return (
     <>
       <div id='main'>
@@ -46,9 +59,18 @@ function App() {
           <h2>35 Fastest times up Alpe d'Huez</h2>
         </div>
         <div id='bar-chart'>
-          <Scatterplot data={chartData} width={800} height={500} />
+          <Scatterplot data={chartData} width={900} height={600} />
         </div>
-        <div id='legend'></div>
+        <div id='legend'>
+          <div class='legend-item'>
+            <span>No doping allegation</span>
+            <div id='doping-negative'></div>
+          </div>
+          <div class='legend-item'>
+            <span>Riders with doping allegations</span>
+            <div id='doping-positive'></div>
+          </div>
+        </div>
         <div id='tooltip' style={{ opacity: 0 }}></div>
       </div>
 
