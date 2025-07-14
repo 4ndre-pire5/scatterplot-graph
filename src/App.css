@@ -67,11 +67,11 @@ body {
 }
 
 #doping-negative {
-  background-color: red;
+  background-color: green;
 }
 
 #doping-positive {
-  background-color: green;
+  background-color: red;
 }
 
 #tooltip {

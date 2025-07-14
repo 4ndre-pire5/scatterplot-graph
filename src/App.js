@@ -63,12 +63,12 @@ function App() {
         </div>
         <div id='legend'>
           <div class='legend-item'>
-            <span>No doping allegation</span>
-            <div id='doping-negative'></div>
-          </div>
-          <div class='legend-item'>
             <span>Riders with doping allegations</span>
             <div id='doping-positive'></div>
+          </div>
+          <div class='legend-item'>
+            <span>No doping allegation</span>
+            <div id='doping-negative'></div>
           </div>
         </div>
         <div id='tooltip' style={{ opacity: 0 }}></div>
